@@ -1,0 +1,45 @@
+# This file is part of Qubes+Whonix.
+# Copyright (C) 2015 Jason Mehring <nrgaway@gmail.com>
+# License: GPL-2+
+
+[Unit]
+Description=Qubes-Whonix Tor Enable/Disable Maybe
+
+ConditionPathExists=!/var/run/qubes/this-is-templatevm
+
+ConditionPathExists=/usr/share/anon-gw-base-files/gateway
+
+ConditionPathExists=|/var/run/qubes/this-is-netvm
+ConditionPathExists=|/var/run/qubes/this-is-proxyvm
+
+## Legacy.
+ConditionPathExists=|/var/run/qubes-service/whonix-gateway
+
+## If Tor settings are modified, make sure it happens before Tor starts.
+Before=tor.service
+
+## Make sure qubes-db is available.
+## Make sure /var/run/qubes/this-is... files are available.
+After=qubes-sysinit.service
+
+## Make sure mount home / rw / bind-dirs.sh is done.
+After=qubes-mount-dirs.service
+
+## Legacy. (Conditionally creates /var/run/qubes-service/whonix-gateway.)
+After=qubes-whonix-sysinit.service
+
+## Legacy.
+## qubes-mount-home.service was renamed to qubes-mount-dirs.service.
+## Keeping qubes-mount-home.service because not everyone has updated yet.
+## It is crucial to run this service after qubes-mount-[home|dir].service,
+## otherwise it would fail.
+After=qubes-mount-home.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/lib/qubes-whonix/init/qubes-whonix-tor-enable-disable-maybe
+StandardOutput=syslog
+
+[Install]
+WantedBy=multi-user.target

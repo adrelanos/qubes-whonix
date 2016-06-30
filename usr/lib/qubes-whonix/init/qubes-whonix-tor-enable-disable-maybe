@@ -1,9 +1,6 @@
 #!/bin/bash -e
 # vim: set ts=4 sw=4 sts=4 et :
 #
-# qubes-whonix-postinit - Called by systemd used to setup other required
-#                         configurations before network is started.
-#
 # This file is part of Qubes+Whonix.
 # Copyright (C) 2014 - 2015 Jason Mehring <nrgaway@gmail.com>
 # License: GPL-2+
@@ -30,13 +27,6 @@ if [ "$qubes_vm_type" = "TemplateVM" ]; then
    # Do none of the following in a TemplateVM.
    exit 0
 fi
-
-# Bind whonix directories to allow changes to persist
-/usr/lib/qubes-whonix/bind-directories
-
-# Replace IP addresses in known configuration files / scripts with
-# currently discovered IP address
-/usr/lib/qubes-whonix/replace-ips
 
 if [ -e /usr/share/anon-gw-base-files/gateway ]; then
 

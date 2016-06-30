@@ -2,49 +2,26 @@
 # Copyright (C) 2015 Jason Mehring <nrgaway@gmail.com>
 # License: GPL-2+
 
-## On Whonix-Gateway or Whonix-Workstation (if /var/run/qubes-service/whonix-gateway or
-## /var/run/qubes-service/whonix-workstation exists),
-## - binds Whonix directories to allow changes to persist (/usr/lib/qubes-whonix/bind-directories).
-## - replaces IPs (/usr/lib/qubes-whonix/replace-ips)
-##
-## If running on Whonix-Gateway (if file status file
-## /var/run/qubes-service/whonix-gateway) exits, and if
-## /var/run/qubes-service/whonix-tor-enable or /var/run/qubes-service/whonix-tor-disable exists,
-## act accordingly on /etc/tor/torrc.
-
 [Unit]
-Description=Qubes-Whonix post init
-ConditionPathExists=|/var/run/qubes-service/whonix-gateway
-ConditionPathExists=|/var/run/qubes-service/whonix-workstation
+Description=Qubes-Whonix post init (bind-directories) (legacy)
 
-Before=qubes-whonix-network.service
+## Make sure qubes-db is available.
+After=qubes-sysinit.service
 
-## So changes to for example,
-## - /usr/share/anon-kde-streamiso/share/config/kioslaverc or
-## - /home/user/.torchat/torchat.ini are applied before these start.
-Before=qubes-gui-agent.service
-
-Before=tor.service
-Before=rinetd.service
-Before=control-port-filter-python.service
-Before=qubes-whonix-firewall.service
-Before=whonixcheck.service
-Before=sdwdate.service
-Before=anon-ws-disable-stacked-tor.service
-
+## Make sure mount home / rw is done.
 After=qubes-mount-dirs.service
-After=qubes-whonix-sysinit.service
 
+## Legacy.
 ## qubes-mount-home.service was renamed to qubes-mount-dirs.service.
 ## Keeping qubes-mount-home.service because not everyone has updated yet.
-## It is curcial to run this service after qubes-mount-[home|dir].service,
+## It is crucial to run this service after qubes-mount-[home|dir].service,
 ## otherwise it would fail.
 After=qubes-mount-home.service
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/lib/qubes-whonix/init/qubes-whonix-postinit
+ExecStart=/usr/lib/qubes-whonix/bind-directories
 ExecStop=/usr/lib/qubes-whonix/bind-directories umount
 StandardOutput=syslog
 
