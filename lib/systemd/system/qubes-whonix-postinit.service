@@ -5,10 +5,6 @@
 [Unit]
 Description=Qubes-Whonix post init (bind-directories) (legacy)
 
-## Make sure qubes-db is available.
-After=qubes-sysinit.service
-
-## Make sure mount home / rw is done.
 After=qubes-mount-dirs.service
 
 ## Legacy.
