@@ -27,4 +27,4 @@ ExecStart=/usr/lib/qubes-whonix/init/enable-firewall
 StandardOutput=syslog
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=network-pre.target

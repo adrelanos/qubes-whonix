@@ -12,7 +12,9 @@ Description=Init Qubes+Whonix services and settings
 
 DefaultDependencies=no
 Before=sysinit.target
+
 After=proc-xen.mount systemd-modules-load.service qubes-db.service qubes-sysinit.service
+Wants=proc-xen.mount systemd-modules-load.service qubes-db.service qubes-sysinit.service
 
 [Service]
 Type=oneshot
