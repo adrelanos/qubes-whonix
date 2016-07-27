@@ -13,11 +13,9 @@ Description=conditionally enable qubes-updates-proxy
 Before=qubes-updates-proxy.service
 
 After=qubes-sysinit.service
-Wants=qubes-sysinit.service
 
 ## Legacy.
 After=qubes-whonix-sysinit.service
-Wants=qubes-whonix-sysinit.service
 
 ## Do not enable qubes-updates-proxy if qubes-updates-cache is already enabled
 ## to avoid these conflicting with each other.

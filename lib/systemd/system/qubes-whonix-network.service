@@ -10,10 +10,7 @@ Before=network-pre.target
 
 ## There is no iptables.service as of Debian jessie.
 After=iptables.service
-Wants=iptables.service
-
 After=qubes-whonix-firewall.service
-Wants=qubes-whonix-firewall.service
 
 [Service]
 Type=oneshot
