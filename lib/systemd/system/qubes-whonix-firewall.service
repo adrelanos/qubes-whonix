@@ -9,9 +9,12 @@
 
 [Unit]
 Description=Qubes Whonix firewall updater
-Before=network-pre.target
+
 Before=qubes-network.service
 Before=qubes-whonix-network.service
+
+Before=network-pre.target
+Wants=network-pre.target
 
 ## Preventing race condition with
 ## /etc/xdg/autostart/qubes-whonixsetup.desktop.
@@ -20,6 +23,9 @@ Before=qubes-whonix-network.service
 ## https://phabricator.whonix.org/T424
 Before=qubes-gui-agent.service
 
+## For /rw/whonix_firewall.d.
+After=local-fs.target
+
 [Service]
 Type=oneshot
 RemainAfterExit=yes
@@ -27,4 +33,4 @@ ExecStart=/usr/lib/qubes-whonix/init/enable-firewall
 StandardOutput=syslog
 
 [Install]
-WantedBy=network-pre.target
+WantedBy=multi-user.target

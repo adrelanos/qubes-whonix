@@ -34,15 +34,6 @@ case "${1}" in
         # make sure user is added to debian-tor group
         groupadd --force debian-tor
         usermod -a --groups debian-tor user
-
-        ## https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=797108
-        if [ -L /etc/systemd/system/multi-user.target.wants/qubes-whonix-network.service ]; then
-           unlink /etc/systemd/system/multi-user.target.wants/qubes-whonix-network.service || true
-        fi
-        if [ -L /etc/systemd/system/multi-user.target.wants/qubes-whonix-firewall.service ]; then
-           unlink /etc/systemd/system/multi-user.target.wants/qubes-whonix-firewall.service || true
-        fi
-
         ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
