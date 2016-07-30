@@ -26,7 +26,6 @@ Before=tor.service
 Before=tor@default.service
 Before=rinetd.service
 Before=control-port-filter-python.service
-Before=qubes-whonix-firewall.service
 Before=whonixcheck.service
 Before=sdwdate.service
 Before=anon-ws-disable-stacked-tor.service
