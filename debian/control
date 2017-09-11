@@ -37,6 +37,7 @@ Depends: qubes-core-agent (>= 2.1.60),
  rsync,
  whonix-gw-firewall | whonix-ws-firewall,
  curl,
+ qubes-core-agent (<< 4.0.0-1) | qubes-core-agent-networking,
  ${python:Depends},
  ${misc:Depends}
 Provides: ${diverted-files}
@@ -65,6 +66,7 @@ Depends: gnome-packagekit,
  libnotify-bin,
  mate-notification-daemon,
  python-nautilus,
+ qubes-core-agent (<< 4.0.0-1) | qubes-core-agent-passwordless-root,
  ${misc:Depends}
 Description: Recommended packages for Qubes-Whonix-Gateway and Qubes-Whonix-Workstation
  A metapackage, which includes recommended packages to ensure, Qubes-Whonix
@@ -78,6 +80,7 @@ Depends: network-manager,
  tinyproxy,
  yum,
  yum-utils,
+ qubes-core-agent (<< 4.0.0-1) | qubes-core-agent-dom0-updates,
  ${misc:Depends}
 Description: Recommended packages for Qubes-Whonix-Gateway
  A metapackage, which installs packages, which are recommended for
