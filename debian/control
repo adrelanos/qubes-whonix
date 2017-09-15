@@ -74,8 +74,7 @@ Description: Recommended packages for Qubes-Whonix-Gateway and Qubes-Whonix-Work
 
 Package: qubes-whonix-gateway-packages-recommended
 Architecture: all
-Depends:
- tinyproxy,
+Depends: tinyproxy,
  yum,
  yum-utils,
  qubes-core-agent (<< 4.0.0-1) | qubes-core-agent-dom0-updates,
