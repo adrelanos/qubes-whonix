@@ -1,3 +1,39 @@
+commit 33efca58012539b29da286f2e7c36b6c0f808a2a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 15 16:43:20 2017 +0200
+
+    minor
+
+commit f398ddd90e92a1f314fd1713119d309ac9574ead
+Merge: d5e29ff 8f554d3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 15 16:42:55 2017 +0200
+
+    Merge remote-tracking branch 'origin/Whonix13' into Whonix13
+
+commit 8f554d3c0d61f7c5a13a4907923682fe078d51c3
+Merge: d5e29ff 67072e2
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Sep 15 16:39:02 2017 +0200
+
+    Merge pull request #6 from marmarek/w13-remove-network-manager
+    
+    Drop dependency on network-manager*
+
+commit 67072e2057c282adc4cdb2266fa11d6358f9243d
+Author: Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>
+Date:   Fri Sep 15 15:30:18 2017 +0200
+
+    Drop dependency on network-manager*
+    
+    Fixes QubesOS/qubes-issues#3094
+
+commit d5e29ff44899a6ae0bcedfa67374515e5b1e9fa1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Sep 12 02:49:14 2017 +0200
+
+    bumped changelog version
+
 commit 62cad2f09722443cac1c209b984580d27785f469
 Merge: 1d7a9bf 2e909d5
 Author: Patrick Schleizer <adrelanos@riseup.net>
