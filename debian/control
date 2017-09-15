@@ -42,7 +42,7 @@ Depends: qubes-core-agent (>= 2.1.60),
  ${misc:Depends}
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}
-Recommends: nautilus-open-terminal, gnome-packagekit, gnome-terminal, network-manager (>= 0.8.1-1), network-manager-gnome
+Recommends: nautilus-open-terminal, gnome-packagekit, gnome-terminal
 Description: Qubes Configuration for Whonix-Gateway and Whonix-Workstation
  This package contains all the scripts and configuration options to be able
  to run Whonix-Gateway and Whonix-Workstation within a Qubes environment.
@@ -59,8 +59,6 @@ Architecture: all
 ## https://github.com/QubesOS/qubes-issues/issues/1102
 Depends: gnome-packagekit,
  gnome-terminal,
- network-manager (>= 0.8.1-1),
- network-manager-gnome,
  gnome-themes-standard,
  xsettingsd,
  libnotify-bin,
@@ -76,7 +74,7 @@ Description: Recommended packages for Qubes-Whonix-Gateway and Qubes-Whonix-Work
 
 Package: qubes-whonix-gateway-packages-recommended
 Architecture: all
-Depends: network-manager,
+Depends:
  tinyproxy,
  yum,
  yum-utils,
