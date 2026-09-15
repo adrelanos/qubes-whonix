@@ -1,3 +1,44 @@
+commit f0ae73bfe83d8cd23b551f162de88d20a243c10d
+Merge: 2f57b82 37af776
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 14 02:41:38 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit 37af776679e4fe8803f50da5c790e1fa7bddaf54
+Merge: 2f57b82 a36eb58
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Sep 13 16:48:28 2026 -0400
+
+    Merge branch 'ai' into arraybolt3/trixie
+
+commit a36eb58445780d312725f28e6053d34cced7f11d
+Merge: 192704a 98ea7d5
+Author: claude <noreply@anthropic.com>
+Date:   Sun Sep 13 06:13:35 2026 -0400
+
+    Merge branch 'master' into ai
+
+commit 98ea7d59649aad15d5befbe156e30d630bc1ead2
+Merge: 6996bfc 2f57b82
+Author: claude <noreply@anthropic.com>
+Date:   Sun Sep 13 06:13:34 2026 -0400
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 192704a965084ff458fb30be46c0b2aabfb1abcf
+Merge: 73ab416 a1db7bc
+Author: claude (dev497 5326191d-88cb-4f38-a96b-e4d8ae5649d3) <noreply@anthropic.com>
+Date:   Wed Sep 9 07:26:16 2026 -0400
+
+    Merge ArrayBolt3/arraybolt3/trixie: 40_qubes.conf nounset fix
+
+commit 2f57b8289eb515efaa1fe916d306ea7059283240
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 9 11:07:34 2026 +0000
+
+    bumped changelog version
+
 commit 49691b1aba7ff6ef8ff099306214578c240b6555
 Merge: 88b33ca a1db7bc
 Author: Patrick Schleizer <adrelanos@whonix.org>
@@ -11,6 +52,20 @@ Date:   Tue Sep 8 20:58:04 2026 -0400
 
     nounset fix
 
+commit 73ab41656a2f86bc1b9ee09cb175a011c5f26df6
+Merge: 2c11502 6996bfc
+Author: claude <noreply@anthropic.com>
+Date:   Tue Sep 8 14:11:33 2026 -0400
+
+    Merge branch 'master' into ai
+
+commit 6996bfc6c1f0910fae82e8c72fda23649e32173f
+Merge: 090eebb 88b33ca
+Author: claude <noreply@anthropic.com>
+Date:   Tue Sep 8 14:11:32 2026 -0400
+
+    Merge remote-tracking branch 'upstream/master'
+
 commit 88b33caf8168783bfd1bad42f313f0821ec381bd
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Sep 8 15:36:54 2026 +0000
@@ -23,6 +78,37 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Sep 8 10:28:59 2026 -0400
 
     Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit 090eebb7b45e2e025693cf8bc93cea07f5030c7c
+Merge: f7fb663 2c11502
+Author: assisted-by-ai (Bot Account) (Machine Account) <228987186+assisted-by-ai@users.noreply.github.com>
+Date:   Mon Sep 7 22:12:53 2026 -0400
+
+    Merge pull request #7 from org-ai-assisted/ai
+
+    rename has.sh -> has.bsh (bashism convention)
+
+commit 2c11502e0c0e9d8c795adaa6bfdd2a68307e908d
+Author: claude (dev474 c7439536-fad8-4884-b71a-d2f3c4c23905) <noreply@anthropic.com>
+Date:   Mon Sep 7 11:45:27 2026 -0400
+
+    rename has.sh to has.bsh (bashism convention)
+
+    Sourced helper-scripts lib uses bashisms; .bsh marks it. Path-only edit.
+
+commit f7fb6635d14554c382fcf69eef75ed8591b24323
+Merge: d865eea 55814af
+Author: claude (dev474 c7439536-fad8-4884-b71a-d2f3c4c23905) <noreply@anthropic.com>
+Date:   Mon Sep 7 11:45:26 2026 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit a883d5f1d570069913b001227ec1594f64cb7eee
+Merge: 1d4832d f7fb663
+Author: claude (dev474 c7439536-fad8-4884-b71a-d2f3c4c23905) <noreply@anthropic.com>
+Date:   Mon Sep 7 11:45:26 2026 -0400
+
+    Merge branch 'master' into ai
 
 commit 55814af60990d67345649b1a18e654e98bc0e65d
 Merge: 56ebf34 d865eea
